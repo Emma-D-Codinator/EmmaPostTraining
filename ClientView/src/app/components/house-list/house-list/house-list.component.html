@@ -1,0 +1,31 @@
+
+<div class="houselist">
+<li class="removelistpoints" *ngFor="let house of houses">
+    
+    <mat-card class="housecard">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle class="Housename">{{house.house_name_type}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="data:image/png;base64,{{house.houseImage}}" alt="Photo of a house">
+        <mat-card-content>
+          <p>
+            {{house.address}}  | Footage(sq.ft.): {{house.footage}} | Cost: {{house.houseCost | currency}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button [routerLink] ="['/house', house.house_name_type]">Furniture</button>
+            <!--<button class="iconcard" mat-icon-button color="warn" aria-label="">
+                <mat-icon>favorite</mat-icon></button>
+            <button class="iconcard" mat-icon-button color="warn" aria-label="">
+                <mat-icon>share</mat-icon></button> -->
+                
+        </mat-card-actions>
+      </mat-card>
+      
+    
+</li>
+
+</div>
+

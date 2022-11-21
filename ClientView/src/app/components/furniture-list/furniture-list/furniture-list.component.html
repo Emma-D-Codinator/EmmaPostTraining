@@ -1,0 +1,27 @@
+
+<div class="houselist">
+
+    <li class="removelistpoints" *ngFor="let furniture of furnituresbyhouses">
+    
+        <mat-card class="housecard">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title></mat-card-title>
+              <mat-card-subtitle class="Housename">{{furniture.furniture_name_type}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="data:image/png;base64,{{furniture.furnitureImage}}" alt="Photo of a furniture">
+            <mat-card-content>
+              <p>
+                 Footage(sq.ft.): {{furniture.furnitureFootage}} | Cost: {{furniture.furniturePrice|currency}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button> Inventory</button>
+            </mat-card-actions>
+          </mat-card>
+                 
+    </li>
+    
+    </div>
+    
+   
