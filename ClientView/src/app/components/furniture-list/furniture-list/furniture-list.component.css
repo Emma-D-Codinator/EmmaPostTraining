@@ -1,0 +1,62 @@
+/* Modified the DIV house images */
+.houselist {
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    flex-wrap:wrap;
+    margin: auto;
+    position:relative;
+    top: 20px;
+    box-shadow: 5px 5px 5px 5px  #888888;
+    padding-top: 10px;
+}
+
+.Housename
+{
+  font-weight: 700;
+}
+
+/* Resized the house images */
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 250px;
+    height: 250px;
+    margin-left: 0.5px;
+    object-fit: contain;
+    
+  }
+
+  /* Resized the house cards hosting the images */
+  .housecard{
+    width: 300px;
+  }
+
+   /* Align the icon colors */
+  .mdc-icon-button{
+    position: relative;
+    left: 50px;
+    color: #2f2f35;
+  }
+  .mat-mdc-raised-button
+  {
+    position: relative;
+    left: 80px;
+    color: #2f2f35;
+  }
+
+  /* Remove list point */
+.removelistpoints{
+    display: block;
+    text-align: center;
+  }
+  
+  .mdc-card__media {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+}
+
+  
+  
