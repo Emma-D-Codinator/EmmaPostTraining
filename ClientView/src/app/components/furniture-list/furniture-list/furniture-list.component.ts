@@ -1,6 +1,8 @@
+import { Furniture } from 'src/app/models/Furniture';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FurnitureListService } from 'src/app/services/furniture-list/furniture-list.service';
+
 
 @Component({
   selector: 'app-furniture-list',
@@ -13,18 +15,23 @@ export class FurnitureListComponent implements OnInit {
   furniturecountbytype: any;
   private House_name_type : any;
   private furniture_name_type : any;
-
+  clickindex: any;
+  
+  
+  
   constructor( 
     private FLS : FurnitureListService,
     private route: ActivatedRoute
     ) { }
 
   ngOnInit() : void {
-      
+     
     this.House_name_type = this.route.snapshot.paramMap.get("furniture");
-    this.FLS.getFurnitureByHouse(this.House_name_type)   
+    this.FLS.getFurnitureByHouse(this.House_name_type)  
     this.displayFurnituresByHouse(this.House_name_type)
     this.displayFurniturecountsByType(this.furniture_name_type)
+    
+    
   }
 
 
@@ -39,8 +46,10 @@ export class FurnitureListComponent implements OnInit {
 
   //Displays all furnitures Count by type
   displayFurniturecountsByType(furniture_name_type : string): void {
-    this.FLS.getFurnitureByHouse(furniture_name_type).subscribe((data: any) => {
+    console.log(furniture_name_type);
+    this.FLS.getFurnitureCountByType(furniture_name_type).subscribe((data: any) => {    
       this.furniturecountbytype = data;
+      console.log(this.furniturecountbytype);
     })
   }
 

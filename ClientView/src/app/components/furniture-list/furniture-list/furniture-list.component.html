@@ -1,7 +1,7 @@
 
 <div class="houselist">
 
-    <li class="removelistpoints" *ngFor="let furniture of furnituresbyhouses">
+    <li class="removelistpoints" *ngFor="let furniture of furnituresbyhouses; let i = index">
     
         <mat-card class="housecard">
             <mat-card-header>
@@ -15,13 +15,19 @@
                  Footage(sq.ft.): {{furniture.furnitureFootage}} | Cost: {{furniture.furniturePrice|currency}}
               </p>
             </mat-card-content>
-            <mat-card-actions>
-                <button mat-raised-button> Inventory</button>
+            <mat-card-actions> 
+                <button (click)="displayFurniturecountsByType(furniture.furniture_name_type)" (click)="clickindex = i" mat-raised-button> 
+                  <div *ngIf="clickindex === i">{{furniturecountbytype}}</div>Inventory
+                </button>              
             </mat-card-actions>
           </mat-card>
-                 
+                    
     </li>
+    <div class="backbutton">
+      <button mat-stroked-button [routerLink] ="['']">Back</button>
+    </div>
     
     </div>
+   
     
    

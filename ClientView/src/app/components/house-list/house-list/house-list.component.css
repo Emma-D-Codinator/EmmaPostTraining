@@ -42,12 +42,23 @@ img {
     color: #2f2f35;
   }
 
+  /* Modified the button */
   .mat-mdc-raised-button
   {
     position: relative;
     left: 80px;
     color: #2f2f35;
   }
+
+   /* Formatted the display */
+  .mat-mdc-card-header
+  {
+
+    padding: 30px 16px 0;
+    height: 20px;
+    
+  }
+ 
 
   /* Remove list point */
 .removelistpoints{

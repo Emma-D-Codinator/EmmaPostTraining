@@ -1,5 +1,6 @@
 export interface Furniture
 {
+    count: any;
 
     furnitureID : number;
     furniture_name_type : string;

@@ -20,9 +20,9 @@ export class FurnitureListService {
   }
 
   //Get furniture count by type
-  public getFurnitureCountByType( furniture_name_type : string): Observable<Furniture> {
+  public getFurnitureCountByType( furniture_name_type : string) : Observable<number> {
     
-    return this.http.get<Furniture>(`${baseURL}/Count-furniturebytype?Furniture_name_type=` + furniture_name_type)
+    return this.http.get<number>(`${baseURL}/Count-furniturebytype?Furniture_name_type=` + furniture_name_type)
     
   }
 
