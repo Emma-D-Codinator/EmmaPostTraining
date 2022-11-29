@@ -1,0 +1,32 @@
+<Div class="createfurniture"> 
+    <mat-card>
+        <form [formGroup]="addHouseForm" (ngSubmit)="createNewHouse()">
+        <mat-form-field>
+            <input matInput placeholder="House Id" type="number" name="id" formControlName="id" />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+            <input matInput placeholder="House Name"  name="house_Name_Type" formControlName="house_Name_Type" />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+            <input matInput placeholder="Address" name="address" formControlName="address" />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+            <input matInput placeholder="Footage" type="number" name="footage" formControlName="footage" />
+        </mat-form-field>
+        <br />
+        <div>
+            <input name="houseImage" formControlName="houseImage" type="file" (change)="onUpLoad($event)">
+        </div>
+        <br />
+        <mat-form-field>
+            <input matInput placeholder="House Cost" type="number" name="houseCost" formControlName="houseCost" />
+        </mat-form-field>
+        <br />
+        <button [disabled]="!addHouseForm.valid" mat-raised-button (click)="createNewHouse()">Add House</button>
+        </form>
+    </mat-card>
+    <div class="postcenter">{{hpostmessage}}</div>
+</Div>

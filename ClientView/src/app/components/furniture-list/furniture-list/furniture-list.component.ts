@@ -2,6 +2,7 @@ import { Furniture } from 'src/app/models/Furniture';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FurnitureListService } from 'src/app/services/furniture-list/furniture-list.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -17,7 +18,16 @@ export class FurnitureListComponent implements OnInit {
   private furniture_name_type : any;
   clickindex: any;
   
-  
+  furniture: any;
+
+  addFurnitureForm = new FormGroup({
+    furnitureID: new FormControl('', [Validators.required]),
+    furniture_name_type: new FormControl('', [Validators.required]),
+    furniturePrice: new FormControl('', [Validators.required]),
+    furnitureImage: new FormControl('', [Validators.required]),
+    furnitureFootage: new FormControl('', [Validators.required]),
+    houseID : new FormControl('', [Validators.required]),
+  });
   
   constructor( 
     private FLS : FurnitureListService,
@@ -52,6 +62,9 @@ export class FurnitureListComponent implements OnInit {
       console.log(this.furniturecountbytype);
     })
   }
+
+
+
 
 
 

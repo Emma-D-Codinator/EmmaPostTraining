@@ -1,0 +1,28 @@
+mat-tool{
+    background-color: blue;
+    color: #fff;
+}
+
+mat-sidenav{
+    margin: 16px;
+    width:150px;
+    border: none;
+    background: #bab9b9;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+mat-sidenav-container{
+    height: calc((100vh));
+}
+
+.content{
+    justify-content: center;
+    align-items: center;
+}
+
+mat-menu-item{
+    size: 5px;
+}

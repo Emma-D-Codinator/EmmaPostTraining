@@ -1,0 +1,42 @@
+<Div class="findhouse"> 
+    <mat-card>
+        <form [formGroup]="FindHouseForm" (ngSubmit)="displayHouseByID(id.value)">
+        <mat-form-field>
+            <input matInput placeholder="Enter House Id" #id  type="number" name="id" formControlName="id"/>
+        </mat-form-field>
+        <br />    
+        <button [disabled]="!FindHouseForm.valid" mat-raised-button (click)="displayHouseByID(id.value)">Find House</button>
+        </form>
+    </mat-card>
+</Div>
+
+<br/>
+
+<br/>
+
+
+<div class="houselist">
+    <li class="removelistpoints">
+        
+        <mat-card class="housecard">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title></mat-card-title>
+              <mat-card-subtitle class="Housename">{{housereturn.house_name_type}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="data:image/png;base64,{{housereturn.houseImage}}" alt="Photo of a house">
+            <mat-card-content>
+              <p>
+                {{housereturn.address}}  | Footage(sq.ft.): {{housereturn.footage}} | Cost: {{housereturn.houseCost | currency}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button [routerLink] ="['/house', housereturn.house_name_type]">Furniture</button>
+                    
+            </mat-card-actions>
+          </mat-card>
+          
+        
+        </li>
+    
+    </div>

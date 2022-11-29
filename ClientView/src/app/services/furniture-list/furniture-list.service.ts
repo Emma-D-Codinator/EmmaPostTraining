@@ -27,5 +27,13 @@ export class FurnitureListService {
   }
 
 
+  //Create furniture 
+  public createFurniture( furniture : any) : Observable<any> {
+    
+    return this.http.post<Furniture>(`${baseURL}/Create-Furniture`, furniture)
+    
+  }
+
+
 
 }

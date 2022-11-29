@@ -1,0 +1,59 @@
+.findhouse {
+    display: flex;
+    justify-content: center;
+    max-width: 60%;
+    flex-wrap:wrap;
+    margin: auto;
+    position:relative;
+    top: 20px;
+    box-shadow: 5px 5px 5px 5px  #888888;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.mat-mdc-form-field{
+    width: 400px;
+}
+
+.houselist {
+    display: flex;
+    justify-content: center;
+    max-width: 60%;
+    flex-wrap:wrap;
+    margin: auto;
+    position:relative;
+    top: 20px;
+    box-shadow: 5px 5px 5px 5px  #888888;
+    padding-top: 10px;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    
+  }
+
+  .removelistpoints{
+    display: block;
+    text-align: center;
+  }
+
+  .Housename
+{
+  font-weight: 700;
+  position: relative;
+  left: 70px;
+}
+
+.mat-mdc-card-header
+{
+
+  padding: 30px 16px 0;
+  height: 20px;
+  
+}
