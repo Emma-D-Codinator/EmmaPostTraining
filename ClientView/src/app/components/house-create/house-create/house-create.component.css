@@ -1,0 +1,23 @@
+.createfurniture {
+    display: flex;
+    justify-content: center;
+    max-width: 60%;
+    flex-wrap:wrap;
+    margin: auto;
+    position:relative;
+    top: 20px;
+    box-shadow: 5px 5px 5px 5px  #888888;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.mat-mdc-form-field{
+    width: 400px;
+}
+
+.postcenter
+  {
+    position:absolute;
+    right: 40%;
+    top: 540px;
+    height: 0px; 
+  }

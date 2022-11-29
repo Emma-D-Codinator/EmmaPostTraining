@@ -1,2 +1,41 @@
 
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+         
+       Pack Movers
+       <hr>
+       <br/>
+
+        <button mat-menu-item [routerLink] ="['']"><mat-icon>home</mat-icon><span>Home</span></button>
+
+        <br/>
+
+        <br/>
+
+        <button mat-menu-item [routerLink] ="['/createhouse']"><mat-icon>library_add</mat-icon><span>House</span></button>
+
+        <br/>
+
+        <br/>
+
+        <button mat-menu-item  [routerLink] ="['/createfurniture']"><mat-icon>library_add</mat-icon><span>Furniture</span></button>
+        <br/>
+
+        <br/>
+
+        <button mat-menu-item [routerLink] ="['/findhouse']"><mat-icon>search</mat-icon><span>House</span></button>
+        
+      
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        
+        <div class="content">
+          
+            <router-outlet></router-outlet>
+
+        </div>
+        
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

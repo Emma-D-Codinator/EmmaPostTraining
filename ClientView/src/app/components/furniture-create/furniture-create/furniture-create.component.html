@@ -1,0 +1,32 @@
+<Div class="createfurniture"> 
+    <mat-card>
+        <form [formGroup]="addFurnitureForm" (ngSubmit)="createNewFurniture()">
+        <mat-form-field>
+            <input matInput placeholder="Furniture Id" type="number" name="furnitureID" formControlName="furnitureID" />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+            <input matInput placeholder="Type"  name="furniture_name_type" formControlName="furniture_name_type" />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+            <input matInput placeholder="Price" type="number" name="furniturePrice" formControlName="furniturePrice" />
+        </mat-form-field>
+        <br />
+        <div>
+            <input name="furnitureImage" formControlName="furnitureImage" type="file" (change)="onUpLoad($event)">
+        </div>
+        <br />
+        <mat-form-field>
+            <input matInput placeholder="Footage" type="number" name="furnitureFootage" formControlName="furnitureFootage" />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+            <input matInput placeholder="House Id" type="number" name="houseID" formControlName="houseID" />
+        </mat-form-field>
+        <br />
+        <button [disabled]="!addFurnitureForm.valid" mat-raised-button (click)="createNewFurniture()">Add Furniture</button>
+        </form>
+    </mat-card>
+    <div class="postcenter">{{fpostmessage}}</div>
+</Div>

@@ -22,4 +22,21 @@ export class HouseListService {
   }
 
 
+  //Get house by id
+  public getHouseByID( id : number) : Observable<House> {
+    
+    return this.http.get<House>(`${baseURL}/get-housebyId?ID=` + id)
+    
+  }
+
+
+  //Create house 
+  public createHouse( house : any) : Observable<any> {
+    
+    return this.http.post<House>(`${baseURL}/Create-House`, house)
+    
+  }
+
+
+
 }
