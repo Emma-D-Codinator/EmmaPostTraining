@@ -23,6 +23,6 @@ mat-sidenav-container{
     align-items: center;
 }
 
-mat-menu-item{
+mat-menu-item{ 
     size: 5px;
 }
